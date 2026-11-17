@@ -12,8 +12,8 @@ the rules that apply them.
 
 The terms:
 
-- `freeUnits(citySize)` and `unitSupportCost`: the units a city supports for nothing, and what each one past them
-  costs;
+- `freeUnits(citySize)` and `unitSupportCost`: how many of a city's units it supports for nothing at a given size, and
+  the shields each unit past them costs it;
 - `martialLaw`: `{ maximumUnits, perUnit }` (`maximumUnits` 0: none);
 - `militaryUnhappiness`: `{ perUnit, free }`, the citizens each aggressive unit makes unhappy after the first `free`;
 - `tradeBonus`: what each square that gives any trade gives more;
@@ -23,5 +23,9 @@ The terms:
   fixed distance;
 - `noUnhappiness`: no citizen is ever unhappy;
 - `science`: the share of research that counts.
+
+Who registers them: civ2-government (support, martial law, military unhappiness, Fundamentalism's content citizens and
+science) and civ2-city (tile penalty, trade bonus, corruption). Civ1's packages register none, so a reader such as
+simple-ai-client's keeps Civ1's own numbers and plays Civ1 exactly as before.
 
 A library: it registers no rules.
